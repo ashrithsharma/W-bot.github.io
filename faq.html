@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W-bot | FAQ's</title>
+    <link rel="shortcut icon" type="image/jpg" href="w-bot.png" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff6ec4, #7873f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            animation-name: transform;
+            animation-duration: 1s;
+        }
+
+        #sideNav {
+            position: static;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #ff6ec4, #7873f5);
+        }
+
+        #sideNav button {
+            margin-bottom: 10px;
+            background-color: #ff6ec4;
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            background: linear-gradient(to left, #abd63e, #d4aa12);
+        }
+
+        #content-container {
+            max-width: 80%;
+            width: 100%;
+            height: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            padding: 20px;
+            overflow-y: auto; /* Add this line to make it scrollable */
+        }
+
+        header {
+            background: linear-gradient(to right, #ff6ec4, #7873f5);
+            color: #ffffff;
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol li {
+            background-color: #ce318a;
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            #chat-container {
+                max-width: 90%;
+            }
+
+            #sidenav {
+                max-width: 90%;
+            }
+
+            #content-container {
+                max-width: 80%;
+            }
+
+            #chat-container {
+                max-width: 80%;
+                width: 100%;
+                height: 60%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 20px;
+                overflow: hidden;
+                background-color: #ffffff;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .message-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 10px;
+            }
+
+            #chat-body {
+                flex-grow: 1;
+                padding: 15px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                color: #ffffff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sideNav">
+        <button onclick="chatbot()">Chatbot</button>
+    </div>
+    <div id="content-container">
+        <header>Some of the frequently asked questions</header>
+        <ol>
+            <li>Periods</li>
+            <li>Bleeding</li>
+            <li>Cramps</li>
+            <li>Cravings</li>
+            <li>Remedies</li>
+            <li>Sensation</li>
+            <li>Sleep</li>
+            <li>Can we consult</li>
+            <li>Fever</li>
+            <li>Medicines</li>
+            <li>Food</li>
+            <li>Rest</li>
+            <li>Bloating</li>
+        </ol>
+    </div>
+    <script>
+        function chatbot() {
+            var fileURL = 'index.html';
+            window.open(fileURL, '_self');
+        }
+    </script>
+</body>
+
+</html>
