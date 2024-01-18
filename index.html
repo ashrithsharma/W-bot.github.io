@@ -89,23 +89,27 @@ span{
 #sideNav {
             position:static;
             left: 0;
-            top: 50%;
+            top: 60%;
             transform: translateY(-50%);
-            display: flex;
+            display:flow-rootl;
+             padding: 50px;
             flex-direction: column;
-            
             padding: 20px;
             border-radius: 20px 20px 20px 20px;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(to right, #ff6ec4, #7873f5);
+            background: linear-gradient(to right, #d60f86, #e48212);
         }
 #sideNav button {
             margin-bottom: 10px;
             background-color:#ff6ec4;
             color:black;
             border: none;
+            font-display:initial;
+            font-variant: small-caps;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding: 10px;
-            border-radius: 4px;
+            outline: #7873f5;
+            border-radius: 15px;
             cursor: pointer;
             background: linear-gradient(to left, #abd63e, #d4aa12);
         }
@@ -228,7 +232,10 @@ p{
             <button id="send-button" onclick="sendMessage()">Send</button>
         </div>
     </div>
-  
+    <footer>
+        Feel free to Chat with "W-Bot", We don't save any of the chat in any format. <br>The chats will self-terminate after the closing of the website.
+    </footer>
+
     <script>
         function sendMessage() {
             var userMessage = document.getElementById('user-message').value;
@@ -271,6 +278,8 @@ p{
                 { input: "stomach pain", output: "Try to avoid heavy meals and strong flavours, Have light meals and be available to fresh air💕" },
                 { input: "cramps", output: "Cramps are normal in menstrual period , but ensure you have some proper medication in serious conditions<br><ol><li><b>Apply Heat</b>: Use a heating pad or take a warm bath to help relax the muscles and ease cramps<br><br></li><li>Over-the-Counter Pain Relievers: Non-prescription pain relievers like ibuprofen or naproxen may help reduce menstrual cramps. Always follow the recommended dosage and guidelines.<br><br><li>Stay Hydrated: Drinking plenty of water can help with overall well-being, including managing menstrual cramps.</li><br><li>Gentle Exercise: Light physical activity, such as walking or stretching, may provide relief. However, listen to your body, and don't overexert yourself.</li>"
                 },
+                {input:"period",output:"A flow of blood and other material from the lining of the uterus, occurring in non-pregnant women at intervals of about 28 days between puberty and the menopause and typically lasting for a few days"},
+ {input:"periods",output:"A flow of blood and other material from the lining of the uterus, occurring in non-pregnant women at intervals of about 28 days between puberty and the menopause and typically lasting for a few days"},
                 {input:"fever",output:"Ohhh no!! Here are some possibilites my friend<br><br><ol><li>Infection: If you have an infection, it can lead to a fever. Infections in the reproductive organs or urinary tract might cause symptoms that coincide with your menstrual period. If you suspect an infection, it's crucial to consult with a healthcare professional for an accurate diagnosis and appropriate treatment.</li><br><br><li>Inflammatory Conditions: Some inflammatory conditions can cause fever. Conditions like pelvic inflammatory disease (PID) may present with fever along with other symptoms. PID is a serious infection that requires prompt medical attention.</li><br><br><li>Underlying Health Conditions: Some individuals with pre-existing health conditions might be more susceptible to fever during their menstrual period. Conditions such as endometriosis or autoimmune disorders could contribute to symptoms like fever.</li>"},
                 { input: "craves", output: "Cravings are normal in menstrual period , do what you're heart says ❤️" },
                 { input: "how are you", output: "I'm just a computer program, but thanks for asking!" },
@@ -282,8 +291,8 @@ p{
                 { input: "remedies", output: "Don't take any self medication ! try to ask elders and other guardians who are reachable also physicist is recommendable" },
                 {input:"ok",output:"Anything else required please feel free to chat, Love you Buddy❤️💖"
                 },
-                {input:"period",output:"a flow of blood and other material from the lining of the uterus, occurring in non-pregnant women at intervals of about 28 days between puberty and the menopause and typically lasting for a few days"},
-                {input:"periods",output:"a flow of blood and other material from the lining of the uterus, occurring in non-pregnant women at intervals of about 28 days between puberty and the menopause and typically lasting for a few days"},
+                
+                {input:"Ohh",output:"Hmm"},
                 {input:"experience",output:"Here are some experiences from web🤗🤗<br><br><a href='https://www.morninglazziness.com/wellness/women-share-their-first-period-stories/' target='_blank'>Read experiences"+"<br><br>"+"<a href='https://www.morninglazziness.com/wellness/women-share-their-first-period-stories/' target='_blank'>Read experiences"},
                 {input:"lunch",output:"No , i wont eat, Its your turn to eat something,But thanks for asking✨"},
                 {input:"dinner",output:"No , i wont eat, Its your turn to eat something,But thanks for asking✨"},
@@ -291,8 +300,10 @@ p{
                 {input:"hello world",output:"Hello, how can i assist you?"},
                 { input:"sensation", output: "vomiting sensation & Uneasyness are normal in these days !! Cheer up buddy😘😘, Your a warrior" },
                 {input:"morning",output:"Good morning,How can I assist you?"},
+                {input:"afternoon",output:"Good afternoon,How can I assist you?"},
                 {input:"evening",output:"Good evening,How can I assist you?"},
                 {input:"night",output:"Have a nice sleep👌, Take care buddy"},
+                {input:"medicine",output:"Self medication is not preferable , please contact physicist for  intake of prescribed medicine"},
                 {input:"medicines",output:"Self medication is not preferable , please contact physicist for  intake of prescribed medicine"},
                 {input:"why we need you",output:"I'm a personalised chatbot , you have no fear of gossips and rumours around you"},
                 {input:"created",output:"Ashrith Sharma"},
@@ -304,9 +315,12 @@ p{
 {input:"can we consult",output:"Yes of course if you have certain sympots like:<ol><li>You haven’t had a period for 3 months.</li><br><li>Your cycle length has appeared to change or is infrequent</li><br><li>Debilitating period pain.</li><br><li>Debilitating period pain.</li><br><li>Spotting between periods.</li><br><li>You have your period more frequently than every 21 days.</li><br><li>You menstruate every 35 days or less.</li><br><a href='https://www.verywellhealth.com/period-symptoms-5184762' target='_blank'>More"},
                 {input:"thank you",output:"Welcome❤️"},
             {input:"thanks", output:"Welcome❤️"},
-        {input:"can i hug you", output:"Do you believe virtual hugs🤗🫂"} , 
-    {input:"bloating",output:"bloating is a condition in which the belly (abdomen) feels full and tight. Your belly may look swollen (distended)."}       ];
-
+        {input:"hug", output:"I like to give you a virtual hug🤗🫂"} , 
+    {input:"bloating",output:"bloating is a condition in which the belly (abdomen) feels full and tight. Your belly may look swollen (distended)."} ,     
+{input:"food",output:"Try to avoid heavy foods, having leafy vegetables which boosts you're Iron levels in your body which can help you in making things good for you and also having good food related to high calcium and protein effienciency  makes you feel better at your weak point"} ,
+{input:"doing",output:"Nothing much waiting for your message😁"},
+{input:"hmm",output:"Anything else required please feel free to chat, Love you Buddy❤️💖"},
+{input:"oh",output:"Hmm😘"}];
             userMessage = userMessage.toLowerCase();
 
             for (var i = 0; i < predefinedResponses.length; i++) {
@@ -317,7 +331,7 @@ p{
                 }
             }
 
-            return "I know i cant completely understand you !! im a predefined chatbot so i have some limitations";
+            return "I'm sorry if i couldn't help you to chat completely😶😔,I'm an predefined chatbot i can answer only related to menstrual cycle...If you couldn't find the information what you want , please visit FAQ's once✨✨, Sorry for inconvenience  :( ";
         }
         function showAbout() {
             
@@ -332,6 +346,7 @@ p{
         var fileURL = 'faq.html';
         window.open(fileURL, '_self');
         }
+        
     </script>
 </body>
 </html>
