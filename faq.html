@@ -61,8 +61,9 @@
         }
 
         header {
-            background: linear-gradient(to right, #ff6ec4, #7873f5);
-            color: #ffffff;
+            background: linear-gradient(to right, #70c526, #c2ee14);
+            color:black;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             padding: 10px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             text-align: center;
@@ -75,12 +76,28 @@
             padding: 0;
         }
 
-        ol li {
+        li {
             background-color: #ce318a;
             color: #fff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding: 10px;
             margin: 5px 0;
             border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display:none;
+            padding: 15px;
+            margin-top: 0px;
+            border-radius: 4px;
+            background-color:white;
+        }
+
+        .dropdown-content p {
+            color:black;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         @media (max-width: 600px) {
@@ -123,9 +140,13 @@
                 flex-direction: column;
             }
 
-            p {
-                color: #ffffff;
+            p{
+                color:black;
             }
+            .dropdown-content{
+            background-color: white;
+            color: bla;
+        }
         }
     </style>
 </head>
@@ -137,19 +158,53 @@
     <div id="content-container">
         <header>Some of the frequently asked questions</header>
         <ol>
-            <li>Periods</li>
-            <li>Bleeding</li>
-            <li>Cramps</li>
-            <li>Cravings</li>
-            <li>Remedies</li>
-            <li>Sensation</li>
-            <li>Sleep</li>
-            <li>Can we consult</li>
-            <li>Fever</li>
-            <li>Medicines</li>
-            <li>Food</li>
-            <li>Rest</li>
-            <li>Bloating</li>
+            <li onclick="toggleDropdown(this)">Periods
+                <div class="dropdown-content">
+                    <p>Periods, also known as menstruation, are a natural physiological process in the menstrual cycle of women. Lasting approximately 28 days, this cycle involves the shedding of the uterine lining if fertilization does not occur. Typically occurring monthly from puberty to menopause, periods are accompanied by hormonal changes, which can lead to physical and emotional variations. While menstruation is a sign of reproductive health, it often comes with discomfort such as cramps and mood swings. Modern society is gradually breaking taboos surrounding periods, emphasizing the importance of open conversations, education, and access to sanitary products for menstrual hygiene.</p>
+                </div>
+            </li>
+            <li onclick="toggleDropdown(this)">Bleeding
+                <div class="dropdown-content">
+                    <p>Bleeding during periods, also known as menstruation, is a natural and essential aspect of the menstrual cycle in women. The uterine lining thickens in preparation for a potential pregnancy. If fertilization does not occur, hormonal changes trigger the shedding of this lining, leading to menstrual bleeding. The blood expelled consists of the uterine tissue and is discharged from the body through the vagina. Typically lasting 3 to 7 days, menstrual bleeding is a vital reproductive function. While variations in bleeding patterns are normal, excessive or irregular bleeding may warrant medical attention, highlighting the importance of understanding and monitoring one's menstrual health.</p>
+                </div>
+            </li>
+            <li onclick="toggleDropdown(this)">Cramps
+                <div class="dropdown-content">
+                    <p>Menstrual cramps, also known as dysmenorrhea, are a common and often uncomfortable part of the menstrual cycle experienced by many women. These cramps usually occur just before and during menstruation. They result from the uterine muscles contracting to help shed the uterine lining. Prostaglandins, hormone-like substances, play a role in these contractions and can cause pain.
+Cramps vary in intensity, with some women experiencing mild discomfort and others enduring more severe pain. Over-the-counter pain relievers, heat therapy, exercise, and relaxation techniques are commonly used to alleviate menstrual cramps. If cramps are severe or interfere significantly with daily activities, seeking medical advice is advisable.</p>
+                </div>
+            </li>
+            <li onclick="toggleDropdown(this)">Cravings
+                <div class="dropdown-content">
+                    <p>During menstruation, hormonal fluctuations can lead to cravings for specific foods. While the exact reasons are not fully understood, hormonal changes, particularly in estrogen and progesterone levels, may influence neurotransmitters and appetite. Many women report an increased desire for comfort foods like chocolate, sweets, or salty snacks. These cravings are thought to be a result of the body's attempt to regulate mood and energy levels during this hormonal shift. While indulging in cravings occasionally is normal, maintaining a balanced diet with nutrient-rich foods can contribute to overall well-being during the menstrual cycle.</p>
+                </div>
+            </li>
+            <li onclick="toggleDropdown(this)">Remedies
+            <div class="dropdown-content">
+            <p>During menstruation, women may experience various discomforts, and adopting effective remedies can significantly alleviate these challenges. Over-the-counter pain relievers like ibuprofen or acetaminophen prove beneficial in managing menstrual cramps and reducing associated pain. Heat therapy, such as applying a heating pad or hot water bottle to the lower abdomen, offers relief from cramps and muscle tension. Staying well-hydrated helps combat bloating, and maintaining a balanced diet with fruits, vegetables, and whole grains positively impacts hormonal balance. Regular exercise, adequate rest, and stress management techniques like meditation contribute to overall well-being. Consulting with healthcare professionals ensures personalized advice tailored to individual needs and health conditions.</p></div></li>
+       <li onclick="toggleDropdown(this)">Sensation
+       <div class="dropdown-content"><p>The sensations experienced during menstruation can vary among individuals, encompassing a spectrum of physical and emotional aspects. Some women may feel a heightened sensitivity or tenderness in the breast area, a common occurrence due to hormonal fluctuations. Additionally, there might be a sensation of bloating, often associated with water retention. Cramping sensations in the lower abdomen are prevalent, signaling the uterine muscles contracting to facilitate the shedding of the uterine lining. Emotionally, mood swings and heightened sensitivity may be present, influenced by hormonal changes. Understanding and acknowledging these sensations can aid in adopting appropriate self-care measures to navigate the menstrual cycle with comfort and resilience.</p></div></li>
+        <li onclick="toggleDropdown(this)">Sleep
+       <div class="dropdown-content"><p>Sleep patterns can be affected during menstruation due to hormonal changes and associated symptoms. Some women may experience difficulties falling asleep or disrupted sleep during their periods. Hormonal fluctuations, particularly changes in estrogen and progesterone levels, can impact the regulation of sleep-wake cycles.
+
+Physical discomfort, such as cramps and bloating, may contribute to sleep disturbances. Additionally, hormonal shifts can influence mood, leading to emotional changes that may affect sleep quality. Adequate rest is essential during this time, so implementing relaxation techniques, maintaining a consistent sleep schedule, and creating a comfortable sleep environment can help alleviate sleep-related challenges during the menstrual cycle.</p></div>
+</li>
+<li onclick="toggleDropdown(this)">Fever
+<div class="dropdown-content"><p>Fever during periods can occur, but it's not a common symptom solely attributed to menstruation. If someone experiences fever along with menstrual discomfort, it's crucial to consider other potential causes. Infections, such as pelvic inflammatory disease (PID) or urinary tract infections (UTIs), can sometimes coincide with the menstrual cycle and lead to fever.
+
+Additionally, pre-existing conditions like endometriosis or fibroids may cause pelvic pain and discomfort, sometimes accompanied by a mild increase in body temperature. It's essential to consult with a healthcare professional to rule out any underlying issues and determine the appropriate course of action.
+
+If fever persists or is accompanied by severe symptoms, seeking prompt medical attention is advised to ensure a comprehensive evaluation and proper management.</p></div></li>
+        <li onclick="toggleDropdown(this)">Medicine<div class="dropdown-content"><p>Over-the-counter nonsteroidal anti-inflammatory drugs (NSAIDs) like ibuprofen (Advil, Motrin) or naproxen (Aleve) are commonly used to alleviate menstrual pain and reduce inflammation. These medications help by inhibiting prostaglandin production, which is a hormone-like substance involved in the menstrual process and associated pain.
+
+For more severe symptoms, hormonal birth control methods, such as birth control pills, patches, or hormonal IUDs, are often prescribed. These methods can regulate the menstrual cycle, reduce the intensity of cramps, and make periods more predictable.
+
+It's crucial to consult with a healthcare professional before taking any medication, as they can provide personalized advice based on an individual's health history and specific needs.</p></div></li>
+   <li onclick="toggleDropdown(this)">Food<div class=dropdown-content><p>During menstruation, maintaining a well-rounded diet is crucial for supporting the body through this natural process. Adequate intake of iron-rich foods, including spinach and lean meats, helps replenish iron lost during bleeding. Calcium sources such as dairy products and leafy greens contribute to bone health, while whole grains like brown rice and quinoa offer sustained energy and fiber for digestive health. Incorporating a variety of fruits and vegetables provides essential vitamins, minerals, and antioxidants. Healthy fats from sources like avocados and nuts contribute to hormonal balance. Staying hydrated with water and herbal teas, such as chamomile or ginger, can alleviate discomfort and promote overall well-being. Consulting with a healthcare professional for personalized nutritional guidance is advisable.</p></div></li>     
+        <li onclick="toggleDropdown(this)">Rest<div class="dropdown-content"><p>During menstruation, giving your body adequate rest is essential for overall well-being. The body undergoes hormonal changes and physical stress during this time, making rest crucial to manage fatigue and discomfort. Ensure you get sufficient sleep each night, aiming for 7-9 hours. If possible, consider incorporating short breaks or naps during the day to recharge. Gentle exercises like yoga or stretching can help alleviate tension and improve circulation. Listen to your body's signals, and if you feel fatigued, don't hesitate to take it easy. Prioritizing rest contributes to a healthier menstrual cycle and better overall health.</p></div></li>
+        <li onclick="toggleDropdown(this)">Bloating<div class="dropdown-content"><p>Bloating is a common symptom experienced by many women during their menstrual cycle. It is often caused by hormonal fluctuations, particularly an increase in estrogen and progesterone levels. These hormones can lead to water retention and gas buildup, resulting in a feeling of abdominal fullness and discomfort.
+
+To manage bloating during periods, consider maintaining a well-balanced diet, staying hydrated, and reducing sodium intake to minimize water retention. Regular exercise can also help improve digestion and reduce bloating. Additionally, herbal teas like peppermint or chamomile may have soothing effects on the digestive system. If bloating persists or becomes severe, it's advisable to consult with a healthcare professional for personalized advice.</p></div></li>
         </ol>
     </div>
     <script>
@@ -157,7 +212,11 @@
             var fileURL = 'index.html';
             window.open(fileURL, '_self');
         }
+
+        function toggleDropdown(li) {
+            var dropdownContent = li.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
     </script>
 </body>
-
 </html>
