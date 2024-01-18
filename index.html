@@ -238,20 +238,23 @@ p{
 
     <script>
         function sendMessage() {
-            var userMessage = document.getElementById('user-message').value;
-            if (userMessage.trim() === '') return;
+            var  userMessage = document.getElementById('user-message').value;
+        if (userMessage.trim() === '') return;
 
-            appendMessage('user', userMessage);
+        appendMessage('user', userMessage);
+        var botResponse = getBotResponse(userMessage);
+        setTimeout(function () {
+            appendMessage('bot', botResponse);
+        }, 500);
+        document.getElementById('user-message').value = '';
+    }
 
-            // Simulate a response from the bot (using predefined responses)
-            var botResponse = getBotResponse(userMessage);
-            setTimeout(function () {
-                appendMessage('bot', botResponse);
-            }, 500);
-
-            // Clear the user input
-            document.getElementById('user-message').value = '';
+   
+    document.getElementById('user-message').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
         }
+    });
 
         function appendMessage(sender, message) {
             var chatBody = document.getElementById('chat-body');
